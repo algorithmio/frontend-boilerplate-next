@@ -40,7 +40,7 @@ export default function Home() {
   };
 
   return (
-    <Container size="md" py="xl">
+    <>
       <Stack gap="xl">
         <Title order={1}>State Management Example</Title>
 
@@ -68,11 +68,11 @@ export default function Home() {
             Go and Get Some Random Facts
           </Button>
 
-          <Button color="blue" onClick={() => router.push("/api-example-2")}>
-            Go to API Example 2
+          <Button color="blue" onClick={() => router.push("/mock-form")}>
+            Go to Mock Form
           </Button>
         </Stack>
       </Stack>
-    </Container>
+    </>
   );
 }

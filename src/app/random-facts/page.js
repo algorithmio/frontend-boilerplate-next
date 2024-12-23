@@ -1,26 +1,21 @@
 "use client";
 
-import { Container, Title, Text, Button, Card, Stack } from "@mantine/core";
-import { useQuery } from "@tanstack/react-query";
-import { getRandomFacts } from "@/services/randomFactsService";
+import { Title, Text, Button, Card, Stack } from "@mantine/core";
+import { useRandomFactsQuery } from "@/hooks/useRandomFactsQuery";
 import { useCallback } from "react";
 import { useRouter } from "next/navigation";
-import { IconArrowBack, IconArrowLeft } from "@tabler/icons-react";
+import { IconArrowLeft } from "@tabler/icons-react";
 
 export default function RandomFactsPage() {
   const router = useRouter();
-  const { data, isLoading, error, refetch } = useQuery({
-    queryKey: ["randomFacts"],
-    queryFn: getRandomFacts,
-    enabled: false,
-  });
+  const { data, isLoading, error, refetch } = useRandomFactsQuery();
 
   const handleGetRandomFact = useCallback(() => {
     refetch();
   }, [refetch]);
 
   return (
-    <Container size="md" py="xl">
+    <>
       <Stack gap="md">
         <Button
           w="fit-content"
@@ -44,6 +39,6 @@ export default function RandomFactsPage() {
           </Text>
         </Card>
       </Stack>
-    </Container>
+    </>
   );
 }
