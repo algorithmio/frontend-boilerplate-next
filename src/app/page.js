@@ -64,19 +64,11 @@ export default function Home() {
         </Card>
 
         <Stack gap="md">
-          <Button
-            variant="outline"
-            color="green"
-            onClick={() => router.push("/api-example-1")}
-          >
-            Go to API Example 1
+          <Button color="green" onClick={() => router.push("/random-facts")}>
+            Go and Get Some Random Facts
           </Button>
 
-          <Button
-            variant="outline"
-            color="purple"
-            onClick={() => router.push("/api-example-2")}
-          >
+          <Button color="blue" onClick={() => router.push("/api-example-2")}>
             Go to API Example 2
           </Button>
         </Stack>
