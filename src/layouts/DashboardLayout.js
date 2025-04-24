@@ -14,7 +14,7 @@ import {
   IconLayoutSidebarRightCollapse,
 } from "@tabler/icons-react";
 import { useAuth } from "@/store/store";
-import { LinksGroup } from "@/components/LinksGroup";
+import { LinksGroup } from "@/components/SidebarNavigationLink";
 import { NAV_ITEMS } from "./constants";
 
 const SIDEBAR_WIDTH = 230;
