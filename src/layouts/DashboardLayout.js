@@ -13,6 +13,7 @@ import {
   IconLayoutSidebarLeftCollapse,
   IconLayoutSidebarRightCollapse,
 } from "@tabler/icons-react";
+import { useHotkeys } from "react-hotkeys-hook";
 import { useAuth } from "@/store/store";
 import { LinksGroup } from "@/components/SidebarNavigationLink";
 import { NAV_ITEMS } from "./constants";
@@ -27,6 +28,11 @@ function DashboardLayout({ children }) {
   const [activeMenu, setActiveMenu] = useState("");
 
   const handleSidebarToggle = () => setSidebarVisible((v) => !v);
+
+  // Add keyboard shortcut
+  useHotkeys("ctrl+alt+s", () => handleSidebarToggle(), [sidebarVisible], {
+    enableOnTags: ["INPUT", "TEXTAREA"],
+  });
 
   return (
     <AppShell
