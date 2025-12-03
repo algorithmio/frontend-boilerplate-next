@@ -2,6 +2,12 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+### Package manager (Team note)
+
+This project uses **pnpm** as the primary package manager.  
+Use `pnpm install`, `pnpm add`, and `pnpm remove` for dependency management.  
+Running app scripts via `npm run <script>` is fine, but **do not use `npm install`** or modify `package-lock.json`.
+
 First, run the development server:
 
 ```bash
